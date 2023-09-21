@@ -28,6 +28,21 @@ app.get('/kastid', (req, res) => {
   });
 });
 
+app.get('/prügi', (req, res) => {
+  // Sample query to fetch data from the database
+  const query = 'SELECT * FROM Prügi';
+  
+  // Execute the query
+  connection.query(query, (error, results) => {
+    if (error) {
+      res.status(500).send('Error fetching data from the database');
+      return;
+    }
+
+    res.json(results); // Send the data as JSON
+  });
+});
+
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
