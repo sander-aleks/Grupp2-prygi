@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.prygi-box{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    justify-content: center;
+    justify-items: center;
+    gap: 10px;
+}
+.paber{
+    border:  1px solid black;
+    width: 160px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1;
+    background-color: rgba(56,132,190,255);
+    border-radius: 5px;
+}
+.metall{
+    border:  1px solid black;
+    width: 160px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1;
+    background-color: rgba(255,242,3,255);
+    border-radius: 5px;
+}
+.klaas{
+    border:  1px solid black;
+    width: 160px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1;
+    background-color: rgba(0,166,80,255);
+    border-radius: 5px;
+}
+.segaolme{
+    border:  1px solid black;
+    width: 160px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1;
+    background-color: rgba(26,25,25,255);
+    color: white;
+    border-radius: 5px;
+}
+.bio{
+    border:  1px solid black;
+    width: 160px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1;
+    background-color: rgba(145,100,45,255);
+    border-radius: 5px;
+}
+.papp-paber{
+    border:  1px solid black;
+    width: 160px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1;
+    background-color: rgba(0,175,239,255);
+    border-radius: 5px;
+}
+a{
+    font-size: 25px;
+    justify-self: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
