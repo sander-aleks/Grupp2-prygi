@@ -12,8 +12,7 @@ async function showTrashBinList() {
     data.forEach((item) => {
         const tableRow = document.createElement('tr')
         const content =`
-            <tr>
-                <td>${item.id}</td>
+            <tr style="background-color:${item.color};">
                 <td>${item.name}</td>
                 <td>${item.color}</td>
             </tr>
