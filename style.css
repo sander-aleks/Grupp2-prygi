@@ -19,6 +19,7 @@
     grid-template-columns: 1;
     background-color: rgba(56,132,190,255);
     border-radius: 5px;
+    margin-top: 10px;
 }
 .metall{
     border:  1px solid black;
@@ -65,6 +66,7 @@
     grid-template-columns: 1;
     background-color: rgba(0,175,239,255);
     border-radius: 5px;
+    margin-top: 10px;
 }
 a{
     font-size: 25px;
