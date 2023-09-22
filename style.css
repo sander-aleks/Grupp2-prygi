@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.table-body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (min-width: 768px) {
+    .laud{
+        display: flex;
+        justify-content: center;
+    }
+
+    tr{
+        border: 1px solid black;
+        height: 300px;
+        width: 300px;
+    }
+
+    .table-body{
+        gap: 100px;
+    }
+}
+    
+@media only screen and (max-width: 768px)   {
+    .laud{
+        display: flex;
+        justify-content: center;
+    }
+
+    table{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .table-body{
+        gap: 20px;
+    }
+
+    tr{
+        border: 1px solid black;
+        height: 150px;
+        width: 150px;
+    }
+}

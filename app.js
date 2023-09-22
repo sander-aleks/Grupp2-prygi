@@ -13,7 +13,6 @@ async function showTrashBinList() {
         const tableRow = document.createElement('tr')
         const content =`
             <tr>
-                <td>${item.id}</td>
                 <td>${item.name}</td>
                 <td>${item.color}</td>
             </tr>
