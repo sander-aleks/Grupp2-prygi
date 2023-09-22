@@ -1,29 +1,24 @@
-async function getProductsData() { // Defineerin asünkroonse funktsiooni nimega getProductsData. 
-    const response = await fetch('https://dummyjson.com/products'); // defineerin muutuja nimega response, ootan vastuse API päringusse ja salvestan muutujasse response
-    const { products } = await response.json(); // Ootame kuni response muudetakse JSON formaati ning võtame response seest 'key' nimega products ja salvestame samanimelisse muutujasse
-    console.log(products); // console logib products data
-    return products; // tagastab muutuja products
+async function getTrashBinList() { // Defineerin asünkroonse funktsiooni nimega getProductsData. 
+    const response = await fetch('http://localhost:3000/kastid'); // defineerin muutuja nimega response, ootan vastuse API päringusse ja salvestan muutujasse response
+    const data = await response.json(); // Ootame kuni response muudetakse JSON formaati ning võtame response seest 'key' nimega products ja salvestame samanimelisse muutujasse
+    console.log(data); // console logib products data
+    return data; // tagastab muutuja products
 }
 
-async function showProductList() {
-    const product = await getProductsData()
-    const productListElement = document.querySelector('.table-body')
+async function showTrashBinList() {
+    const data = await getTrashBinList()
+    const TrashBinListElement = document.querySelector('.table-body')
 
-    product.forEach((product) => {
+    data.forEach((item) => {
         const tableRow = document.createElement('tr')
         const content =`
-            <tr>
-                <td>${product.id}</td>
-                <td>${product.title}</td>
-                <td>${product.rating}</td>
-                <td>${product.price}</td>
-                <td>${product.stock}</td>
-                <td>${product.discountPercentage}</td>
-
+            <tr style="background-color:${item.color};">
+                <td>${item.name}</td>
+                <td>${item.color}</td>
             </tr>
         `
         tableRow.innerHTML = content;
-        productListElement.append(tableRow)
+        TrashBinListElement.append(tableRow)
     })
 }
-showProductList()
+showTrashBinList()
